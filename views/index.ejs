@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="/views/style.css" rel="stylesheet">
+<title>무제 문서</title>
+</head>
+<body>
+<div class="container">
+<div class="news_board"><ul>
+<% for (let i = 0; i < news.length; i++) { %>
+    <li><p><a href="<%= news[i].url %>" target="_blank"><em></em><%= news[i].title %></a></p></li>
+<% } %>
+</ul></div>
+<div class="event_board"><ul>
+<% for (let i = 0; i < event.length; i++) { %>
+    <li>
+        <div class="event_list_warp">
+            <dl>
+                <dt><a href="<%= event[i].url %>" target="_blank"><img src="<%= event[i].img %>"></a></dt>
+                <dd class="data"><p><a href="<%= event[i].url %>" target="_blank"><%= event[i].title %></a></p></dd>
+                <dd class="date"><p><%= event[i].text %></p></dd>
+            </dl>
+        </div>
+    </li>
+<% } %>
+</ul></div>
+</div>
+<div style="margin-left: 10%">
+    <a href="http://www.mapleroad.kr" target="_blank"><img src="/views/mapleroad.png" alt=""></a>
+    <a href="http://maple-util.web.app" target="_blank"><img src="/views/util.png" alt=""></a>
+    </div>
+<a href="http://www.youtube.com/@chickenofnight" target="_blank"><img src="/views/channels4_banner.jpg" alt=""></a>
+<a href="http://www.youtube.com/@maplestorykr" target="_blank"><img src="/views/maple/channels4_banner.jpg" alt=""></a>
+</body>
+</html>
